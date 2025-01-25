@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Tinos', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    color: rgb(85, 85, 85);
+}
+
+image{
+max-width: 100%;
+}
+
+/* transition classes */
+
+
+
+/* ULTILITY CLASSES */ 
+
+html{
+    scroll-behavior: smooth;
+}
