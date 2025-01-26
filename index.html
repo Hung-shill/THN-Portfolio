@@ -20,54 +20,101 @@
         </div>
         <ul class="navbar">
             <li>
-                <a class="btn btn-light" href="index.html">
+                <a class="btn btn-light" href="#about">
                     <i class="fas fa-user"></i>
                     About</a>
             </li>
             <li>
-                <a class="btn btn-light" href="./experiences"> 
+                <a class="btn btn-light" href="#experiences"> 
                     Experiences
                 </a>
             </li>
             <li>
-                <a class="btn btn-light" href="./projects"> My Projects</a>
+                <a class="btn btn-light" href="#projects"> My Projects</a>
             </li>
             <li>
-                <a class="btn btn-light" href="./contact"> Contact Info</a>
+                <a class="btn btn-light" href="#contact"> Contact Info</a>
             </li>
             </ul>
         </div>
 </nav>
 
 <section id="profile">
-    <div class="section_pic_container">
-        <img src="./images/profile-pic.jpg" alt="Hung Nguyen profile picture">
+    <div class="section-pic-container">
+        <img src="./images/profile-pic.jpg" alt="Hung Nguyen profile picture" class="section-pic-container">
     </div>
     <div class="section-text">
         <p class="section-text-p1"> Hello, I'm</p>
         <h1 class="title"> Hung Nguyen</h1>
-        <p class="section-text-p2"> mechanical engineering</p>
+        <p class="section-text-p2"> mechanical engineer student</p>
         <div class="btn-container">
-            <button class="btn btn-color-2" 
-            onclick="window.open('./asset/resume.pdf') "> learn more about my experiences</button>  
+            <button class="btn btn-color-2"
+            onclick="window.open('./asset/resume.pdf')">My Resume</button>  
             <!-- reveal resume when clicked upon -->
-        </div>
+        
         <button class="btn btn-color-1" 
-        onclick="location.href='./contact'"> go to Contact</button>  
+        onclick="location.href='./contact'"> Contact Info</button>  
+    </div>
         <div id="socials-container">
             <img 
             src="./images/linkedin.png" 
-            alt="My Linkedin profile" 
+            alt="My Linkedin profile"
             class="icon" 
             onclick="window.open('https://www.linkedin.com/in/hungtrongnguyen/')">
             <img 
-            src="./images/github.png" 
-            alt="My github" 
+            src="./images/github.png"
+            alt="My github"
             class="icon"
             onclick="window.open('https://github.com/Hung-shill')">
         </div>
     </div>
 </section>
-<script src="main.javascript"></script>
+
+<section id="about">
+    <p class="section-text-p1"> get to know more</p>
+    <h1 class="title">About me</h1>
+    <div class="section-container">
+        <div class="section-pic-container">
+            <!-- insert about picture here -->
+            <img src="./images/favicon.jpg" 
+            alt="profile picture"
+            class="about-pic">
+        </div>
+        <div class="about-detail-container">
+            <div class="about-container">
+                <!-- insert experience icon whatever -->
+                <div class="detail-container">
+                    <img src="./images/experiences.png"
+                        alt="experience icon"
+                        class="icon"> 
+                    <h3>Experiences</h3>
+                    <p>software engineer intern<br /> Mechanical engineer intern</p>
+                </div>
+                <div class="detail-container">
+                <!-- insert education icon -->
+                    <img 
+                        src="./images/qualification.png" 
+                        alt="qualification icon"
+                        class="icon"> 
+                    <h3>Education</h3>
+                    <p>Pursuing B.S Bachelor of Mechanical Engineer</p>
+                </div>
+            </div> 
+ 
+        <div class="text-container">
+                <p>Lorem ipsum dolor sit amet consectetur, 
+                    adipisicing elit. Similique saepe fuga nobis autem 
+                    at ea ab distinctio dolorem modi deleniti eaque, magni
+                    facilis rem ullam fugiat repellat debitis, odio nisi dolor
+                    ibus, earum delectus a. Tempora accusantium a suscipit aut commodi, similique voluptatem fugiat, voluptatum recusandae soluta, minima perferendis ullam illum!
+                </p>
+            </div>
+        </div> 
+    </div>   
+        <img src="./images/arrow.png" alt="arrow" class="icon-arrow" onclick="location.href='./#experience'"> 
+</section>
+<script src="main.javascript">
+
+</script>
 </body>
 </html>
