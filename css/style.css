@@ -1,53 +1,77 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: 'Tinos', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: #fff;
+body {
+  font-family: 'Tinos', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff;
 }
 
-a{
-    text-decoration: none;
-    color: #333;
+a {
+  text-decoration: none;
+  text-decoration-color: white;
+  color: #333;
 }
 
-ul{
-    list-style: none;
+
+ul {
+  list-style: none;
 }
 
-p{
-    color: rgb(85, 85, 85);
+p {
+  color: rgb(85, 85, 85);
 }
 
-image{
-max-width: 100%;
+image {
+  max-width: 100%;
 }
 
 /* transition classes */
 
-.btn{
-    transition: all 300ms ease;
+.btn {
+  transition: all 300ms ease;
 }
 
-/* desktop nav */
+/* DESKTOP NAVIGATION */
 
-nav, .navbar{
-    display: flex;
+nav,
+.navbar {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.navbar{
+  gap: 2rem;
+  list-style: none;
+  font: 1.5rem;
+}
+
+a:hover{
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color:  rgb(181,181,181);
+}
+
+.logo{
+  font-size: 2rem;
 
 }
 
-nav{
-    justify-content: space-around;
-    align-items: center;
-    height: 17vh;
+.logo:hover{
+  cursor: default;
 }
-/* ULTILITY CLASSES */ 
+/* ULTILITY CLASSES */
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }

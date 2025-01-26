@@ -13,33 +13,61 @@
     <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
     </head>
 <body>
-<nav class="navbar">
+<nav id="navbar">
         
         <div  class="logo">
             Hung Nguyen
         </div>
         <ul class="navbar">
-            
-            
-                <li>
-                    <a class="btn btn-light" href="index.html">Home</a>
-                </li>
-                <li>
-                    <a class="btn btn-light" href="#"> 
-                        <i class="fas fa-user"></i>
-                        About Me
-                    </a>
-                </li>
-                <li>
-                    <a class="btn btn-light" href="#"> My Projects</a>
-                </li>
-                <li>
-                    <a class="btn btn-light" href="#"> Contact Info</a>
-                </li>
+            <li>
+                <a class="btn btn-light" href="index.html">
+                    <i class="fas fa-user"></i>
+                    About</a>
+            </li>
+            <li>
+                <a class="btn btn-light" href="./experiences"> 
+                    Experiences
+                </a>
+            </li>
+            <li>
+                <a class="btn btn-light" href="./projects"> My Projects</a>
+            </li>
+            <li>
+                <a class="btn btn-light" href="./contact"> Contact Info</a>
+            </li>
             </ul>
-            
         </div>
 </nav>
+
+<section id="profile">
+    <div class="section_pic_container">
+        <img src="./images/profile-pic.jpg" alt="Hung Nguyen profile picture">
+    </div>
+    <div class="section-text">
+        <p class="section-text-p1"> Hello, I'm</p>
+        <h1 class="title"> Hung Nguyen</h1>
+        <p class="section-text-p2"> mechanical engineering</p>
+        <div class="btn-container">
+            <button class="btn btn-color-2" 
+            onclick="window.open('./asset/resume.pdf') "> learn more about my experiences</button>  
+            <!-- reveal resume when clicked upon -->
+        </div>
+        <button class="btn btn-color-1" 
+        onclick="location.href='./contact'"> go to Contact</button>  
+        <div id="socials-container">
+            <img 
+            src="./images/linkedin.png" 
+            alt="My Linkedin profile" 
+            class="icon" 
+            onclick="window.open('https://www.linkedin.com/in/hungtrongnguyen/')">
+            <img 
+            src="./images/github.png" 
+            alt="My github" 
+            class="icon"
+            onclick="window.open('https://github.com/Hung-shill')">
+        </div>
+    </div>
+</section>
 <script src="main.javascript"></script>
 </body>
 </html>
