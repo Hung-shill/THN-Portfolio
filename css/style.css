@@ -30,8 +30,22 @@ max-width: 100%;
 
 /* transition classes */
 
+.btn{
+    transition: all 300ms ease;
+}
 
+/* desktop nav */
 
+nav, .navbar{
+    display: flex;
+
+}
+
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
 /* ULTILITY CLASSES */ 
 
 html{
