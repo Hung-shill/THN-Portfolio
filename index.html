@@ -14,31 +14,30 @@
     </head>
 <body>
 <nav id="navbar">
-        
         <div  class="logo">
             Hung Nguyen
         </div>
         <ul class="navbar">
             <li>
-                <a class="btn btn-light" href="#about">
+                <a class="btn btn-light" onclick="location.href='./#about'">
                     <i class="fas fa-user"></i>
                     About</a>
             </li>
             <li>
-                <a class="btn btn-light" href="#experiences"> 
+                <a class="btn btn-light" onclick="location.href='./#experience'"> 
                     Experiences
                 </a>
             </li>
             <li>
-                <a class="btn btn-light" href="#projects"> My Projects</a>
+                <a class="btn btn-light" onclick="location.href='./#projects'"> My Projects</a>
             </li>
             <li>
-                <a class="btn btn-light" href="#contact"> Contact Info</a>
+                <a class="btn btn-light" onclick="location.href='./#contactInfo'"> Contact Info</a>
             </li>
             </ul>
         </div>
 </nav>
-
+<!-- profile start here -->
 <section id="profile">
     <div class="section-pic-container">
         <img src="./images/profile-pic.jpg" alt="Hung Nguyen profile picture" class="section-pic-container">
@@ -68,8 +67,10 @@
             onclick="window.open('https://github.com/Hung-shill')">
         </div>
     </div>
+    <img src="./images/arrow.png" alt="arrow" class="icon-arrow" onclick="location.href='./#about'"> 
 </section>
 
+<!-- about start here -->
 <section id="about">
     <p class="section-text-p1"> get to know more</p>
     <h1 class="title">About me</h1>
@@ -102,17 +103,199 @@
             </div> 
  
         <div class="text-container">
-                <p>Lorem ipsum dolor sit amet consectetur, 
-                    adipisicing elit. Similique saepe fuga nobis autem 
-                    at ea ab distinctio dolorem modi deleniti eaque, magni
-                    facilis rem ullam fugiat repellat debitis, odio nisi dolor
-                    ibus, earum delectus a. Tempora accusantium a suscipit aut commodi, similique voluptatem fugiat, voluptatum recusandae soluta, minima perferendis ullam illum!
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in quia necessitatibus similique corporis explicabo, facere architecto odio cumque animi eveniet qui, fugit optio ratione mollitia, nisi quisquam rem delectus. Consequatur, vel? Aliquid harum sunt, repellat dolorem optio quo? Eveniet excepturi, inventore, voluptas harum repudiandae dolor reprehenderit accusantium consequuntur minus eligendi fuga dicta laudantium, odio nam incidunt dolore labore deserunt minima quibusdam debitis sint adipisci. Eligendi illo distinctio soluta quasi repellat autem excepturi provident, doloremque odit blanditiis in vitae harum eveniet reiciendis nisi, delectus saepe, unde quidem architecto aspernatur aliquam laudantium! Alias, consequuntur. Corporis nemo omnis ipsa nulla, dolore quibusdam.
                 </p>
             </div>
         </div> 
     </div>   
         <img src="./images/arrow.png" alt="arrow" class="icon-arrow" onclick="location.href='./#experience'"> 
 </section>
+
+<!-- experience start here -->
+<section id="experience">
+    <p class="section-text-p1"> Explore my</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-detail-container">
+        <div class="about-container">
+            <!-- Frontend developer subsection -->
+            <div class="detail-container">
+                <h2 class="experience-sub-title">Frontend Development</h2>
+                <div class="article-container"> 
+                    <Article>
+                        <img src="images/checkmark.png" alt="familiar" class="icon">
+                        <div>
+                            <h3>HTML</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </Article>
+                    <Article>
+                        <img src="images/checkmark.png" alt="familiar" class="icon">
+                        <div>
+                            <h3>CSS</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </Article>
+                    <Article>
+                        <img src="images/checkmark.png" alt="familiar" class="icon">
+                        <div>
+                            <h3>Node.js</h3>
+                            <p>Basic</p>
+                        </div>
+                    </Article>
+                    <Article>
+                        <img src="images/checkmark.png" alt="familiar" class="icon">
+                        <div>
+                            <h3>javascript</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </Article>
+                </div>
+            </div> 
+            <!-- Backend developer subsection -->
+            <div class="detail-container">
+                <h2 class="experience-sub-title">Backend Development</h2>
+                <div class="article-container"> 
+                    <Article>
+                        <img src="images/checkmark.png" alt="familiar" class="icon">
+                        <div>
+                            <h3>Java</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </Article>
+                    <Article>
+                        <img src="images/checkmark.png" alt="familiar" class="icon">
+                        <div>
+                            <h3>Git</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </Article>
+                    <Article>
+                        <img src="images/checkmark.png" alt="familiar" class="icon">
+                        <div>
+                            <h3>PostgreSQL</h3>
+                            <p>Basic</p>
+                        </div>
+                    </Article>
+                </div>
+            </div>
+            <!-- Mechanical engineering subsection -->
+            <div class="detail-container">
+                <h2 class="experience-sub-title">Mechanical Engineer</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="images/checkmark.png" alt="familiar" class="icon">
+                        <div>
+                            <h3>SolidWork</h3>
+                            <p>Intermediate</p>
+                    </div>
+                    </article>
+                    <Article>
+                        <img src="images/checkmark.png" alt="familiar" class="icon">
+                        <div>
+                            <h3>Matlab</h3>
+                            <p>Basic</p>
+                        </div>
+                    </Article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="./images/arrow.png" alt="arrow" class="icon-arrow" onclick="location.href='./#projects'"> 
+</section>
+
+<!-- projects start here -->
+<section id="projects">
+    <p class="section-text-p1"> These are my</p>
+    <h1 class="title">projects</h1>
+    <div class="experience-detail-container">
+        <div class="about-container">
+        <div class="detail-container color-container">
+            <!-- insert project img here -->
+            <div class="article-container"> <img src="./images/project1" alt="project 1" class="project-img"></div>
+            <h2 class="experience-sub-title project-title"> Project One</h2>
+            <div class="btn-container">
+                <!-- point to project page -->
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">
+                    github
+                </button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">
+                    Mechanical
+                </button>
+            </div>
+        </div>  
+        <div class="detail-container color-container">
+            <!-- insert project img here -->
+            <div class="article-container"> <img src="./images/project2" alt="project 2" class="project-img"></div>
+            <h2 class="experience-sub-title project-title"> Project Two</h2>
+            <div class="btn-container">
+                <!-- point to project page -->
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">
+                    github
+                </button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">
+                    Mechanical
+                </button>
+            </div>
+        </div>
+        <div class="detail-container color-container">
+            <!-- insert project img here -->
+            <div class="article-container"> <img src="./images/project3" alt="project 3" class="project-img"></div>
+            <h2 class="experience-sub-title project-title"> Project Three</h2>
+            <div class="btn-container">
+                <!-- point to project page -->
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">
+                    github
+                </button>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">
+                    Mechanical
+                </button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <img src="./images/arrow.png" alt="arrow" class="icon-arrow" onclick="location.href='./#contactInfo'"> 
+</section>
+
+<!-- Contact start here -->
+<section id="contactInfo">
+<p class="section-text-p1">Get in Touch</p>
+<h1 class="title">contact me</h1>
+<div class="info-upper-container">
+    <div class="contactInfo-container">
+        <img src="images/email.png" alt="email icon" class="icon contact-icon">
+        <p > <a href="mailto:hnguyen5478069@gmail.com">hnguyen5478069@gmail.com</a></p>
+    </div>
+    <div class="contactInfo-container">
+        <img src="images/linkedin.png" alt="linkedin icon" class="icon contact-icon">
+        <p ><a href="https://www.linkedin.com/in/hungtrongnguyen/">my linkedin</a></p>
+    </div>
+</div>
+</section>
+<footer> 
+    <nav>
+        <div class="navbar-container">
+            <ul class="navbar">
+                <li>
+                    <a class="btn btn-light" onclick="location.href='./#about'">
+                        <i class="fas fa-user"></i>
+                        About</a>
+                </li>
+                <li>
+                    <a class="btn btn-light" onclick="location.href='./#experience'"> 
+                        Experiences
+                    </a>
+                </li>
+                <li>
+                    <a class="btn btn-light" onclick="location.href='./#projects'"> My Projects</a>
+                </li>
+                <li>
+                    <a class="btn btn-light" onclick="location.href='./#contactInfo'"> Contact Info</a>
+                </li>
+                </ul>
+        </div>
+    </nav>
+    <p>Copyright &#169; 2025 Hung Nguyen Reserved.</p>
+</footer>
 <script src="main.javascript">
 
 </script>
