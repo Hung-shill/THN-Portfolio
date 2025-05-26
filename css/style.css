@@ -144,7 +144,7 @@ section {
 
 .icon {
   cursor: pointer;
-  height: 2rem;
+  height: 3rem;
 }
 
 /* BUTTON */
@@ -298,13 +298,13 @@ article .icon {
 }
 
 .project-img {
-  border-radius: 2rem;
+  border-radius: 3rem;
   max-width: auto;
   max-height: 480px;
 }
 
 .project-title {
-  margin: 1rem;
+  margin: 2rem;
   color: black;
 }
 
