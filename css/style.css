@@ -101,8 +101,8 @@ section {
 .section-pic-container {
   display: flex;
   border-radius: 10%;
-  height: auto;
-  width: auto;
+  max-height: auto;
+  max-width: auto;
   margin: auto 0;
 }
 
@@ -112,13 +112,17 @@ section {
 }
 
 .section-text p {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .section-text-p1 {
   text-align: center;
 }
 .section-text-p1 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+.section-text-p3 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
@@ -374,4 +378,19 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+/* PARKINGPAL PROBLEM SECTION  */
+#pp_problem {
+  position: relative;
+}
+
+/* PP CONTRIBUTION SECTION  */
+#pp_contribution {
+  position: relative;
+}
+
+/* PP RESULT SECTION  */
+#pp_result {
+  position: relative;
 }
