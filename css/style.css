@@ -222,7 +222,7 @@ section {
   border-radius: 2rem;
   size: flex;
   max-height: auto;
-  max-width: auto;
+  max-width: 100%;
 }
 
 .icon-arrow {
@@ -392,5 +392,19 @@ footer p {
 
 /* PP RESULT SECTION  */
 #pp_result {
+  position: relative;
+}
+/* PARKINGPAL PROBLEM SECTION  */
+#fsae_problem {
+  position: relative;
+}
+
+/* PP CONTRIBUTION SECTION  */
+#fsae_contribution {
+  position: relative;
+}
+
+/* PP RESULT SECTION  */
+#fsae_result {
   position: relative;
 }
