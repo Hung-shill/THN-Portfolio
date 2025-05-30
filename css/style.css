@@ -380,31 +380,45 @@ footer p {
   text-align: center;
 }
 
-/* PARKINGPAL PROBLEM SECTION  */
+/* 1st proto PARKINGPAL PROBLEM SECTION  */
 #pp_problem {
   position: relative;
 }
 
-/* PP CONTRIBUTION SECTION  */
+/* PP 1st proto CONTRIBUTION SECTION  */
 #pp_contribution {
   position: relative;
 }
 
-/* PP RESULT SECTION  */
+/* PP 1st proto RESULT SECTION  */
 #pp_result {
   position: relative;
 }
-/* PARKINGPAL PROBLEM SECTION  */
+
+/* fsae PROBLEM SECTION  */
 #fsae_problem {
   position: relative;
 }
 
-/* PP CONTRIBUTION SECTION  */
+/* fsae CONTRIBUTION SECTION  */
 #fsae_contribution {
   position: relative;
 }
 
-/* PP RESULT SECTION  */
+/* fsae RESULT SECTION  */
 #fsae_result {
+  position: relative;
+}
+
+/* PP 2nd proto PROBLEM SECTION  */
+#pp1_problem {
+  position: relative;
+}
+/* PP 2nd proto CONTRIBUTION SECTION  */
+#pp1_contribution {
+  position: relative;
+}
+/* PP 2nd proto RESULT SECTION  */
+#pp1_result {
   position: relative;
 }
