@@ -1,93 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <META  charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Hung Nguyen Portfolio</title>
-    </head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="" type="image/x-icon">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hung Nguyen Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Your Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+</head>
 <body>
-    <nav id="navbar">
+  <!-- NAVIGATION -->
+<nav id="navbar">
         <ul class="navbar">
             <li>
-                <a class="btn btn-light" onclick="location.href='./#navbar' ">
+                <a class="btn btn-light" onclick="location.href='./#about' ">
                     <i class="fas fa-user"></i>
-                    Front Page</a>
+                    About</a>
             </li>
             <li>
                 <a class="btn btn-light" onclick="location.href='./#experience'"> 
-                    Experiences
+                    Skills
                 </a>
-            </li>
-            <li>
-                <a class="btn btn-light" onclick="location.href='./project.html'">Projects</a>
             </li>
             <li>
                 <a class="btn btn-light" onclick="location.href='./#contactInfo'"> Contact Info</a>
             </li>
+            <li>
+                <a class="btn btn-light" onclick="location.href='./project.html'"> Projects</a>
+            </li>
             </ul>
-        </div>
 </nav>
-<section id="projects">
-    <h1 class="title">Projects I'm interested in and working on</h1>
-    <div class="experience-detail-container">
-        <div class="about-container">
-            <div class="detail-container color-container">
-                <!-- insert project img here -->
-                <div class="article-container"> <img src="./images/FSAEproject-pic.jpg" alt="project 1" class="project-img"></div>
-                <h2 class="experience-sub-title project-title"> Lion Motorsport FSAE (Suspension Team)</h2>
-                <div class="btn-container">
-                    <!-- point to project page -->
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='./FSAE.html'">
-                        On going project!
-                    </button>
-                </div>
-                
-            </div>  
-            <div class="detail-container color-container">
-                <!-- insert project img here -->
-                <div class="article-container"> <img src="./images/Parkingpal.jpg" alt="project 1" class="project-img"></div>
-                <h2 class="experience-sub-title project-title"> IOT Parking Sensor</h2>
-                <div class="btn-container">
-                    <!-- point to project page -->
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='./parkingpal.html'">
-                        1st prototype
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='./parkingpal1.html'">
-                        2nd prototype
-                    </button>
-                </div>
-            </div>
-            
-            </div>
-            <div class="experience-detail-container">
-        <div class="about-container">
-            <div class="detail-container color-container">
-                <!-- insert project img here -->
-                <div class="article-container"> <img src="./images/QS-S25.png " alt="project 2" class="project-img"></div>
-                <h2 class="experience-sub-title project-title"> Driver Rehabilitation Summer Research</h2>
-                <div class="btn-container">
-                    <!-- point to project page -->
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='./research.html'">
-                        1. Building Phase
-                    </button>
-                    <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='./researchData.html'">
-                        2. Collecting Data Phase
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='./researchPresent.html'">
-                        3. Presenting Phase
-                    </button> -->
-                </div>
-            </div>
-            </div>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <h1 class="title">Projects I'm Interested In</h1>
+
+    <div class="projects-container">
+      <!-- Card 1: FSAE Suspension -->
+      <article class="project-card">
+        <div class="project-card__image">
+          <img src="./images/FSAEproject-pic.jpg" alt="FSAE suspension project">
+        </div>
+        <header class="project-card__header">
+          <h3 class="project-card__title">Lion Motorsport FSAE (Suspension Team)</h3>
+        </header>
+        <ul class="project-card__summary">
+          <li>
+            <span class="label">Title & Role:</span>
+            <span class="value">Suspension Team Member</span>
+          </li>
+          <li>
+            <span class="label">Problem:</span>
+            <span class="value">
+              Build the suspension system for Lion Motorsport’s first FSAE car
+            </span>
+          </li>
+          <li>
+            <span class="label">Contribution:</span>
+            <span class="value">
+              Modeled parts in SolidWorks and helped validate load responses via FEA simulations
+            </span>
+          </li>
+          <li>
+            <span class="label">Result:</span>
+            <span class="value">
+              Designing vehicle suspension system estimate to deliver full car at the end of 2025
+            </span>
+          </li>
+        </ul>
+        <footer class="project-card__footer">
+          <button class="btn" onclick="location.href='./FSAE.html'">
+            View Project →
+          </button>
+        </footer>
+      </article>
+
+      <!-- Card 2: IoT Parking Sensor -->
+      <article class="project-card color-container">
+        <div class="project-card__image">
+          <img src="./images/Parkingpal.jpg" alt="IoT Parking Sensor prototype">
+        </div>
+        <header class="project-card__header">
+          <h3 class="project-card__title">Parking Pal Internship (Startup)</h3>
+        </header>
+        <ul class="project-card__summary">
+          <li>
+            <span class="label">Title & Role:</span>
+            <span class="value">Product Development Engineer Intern</span>
+          </li>
+          <li>
+            <span class="label">Problem:</span>
+            <span class="value">
+               Parking in LA is bad
+            </span>
+          </li>
+          <li>
+            <span class="label">Contribution:</span>
+            <span class="value">
+              Create multiple prototypes using Arduino, ESP32 and sensors
+            </span>
+          </li>
+          <li>
+            <span class="label">Result:</span>
+            <span class="value">
+              On-going design and development of a smart parking sensor with multiple approaches
+            </span>
+          </li>
+        </ul>
+        <footer class="project-card__footer">
+          <button class="btn" onclick="location.href='./parkingpal.html'">
+            1st Prototype →
+          </button>
+          <button class="btn" onclick="location.href='./parkingpal1.html'">
+            2nd Prototype →
+          </button>
+        </footer>
+      </article>
+
+      <!-- Card 3: Driver Rehabilitation Research -->
+      <article class="project-card color-container">
+        <div class="project-card__image">
+          <img src="./images/QS-S25.png" alt="Driver Rehabilitation Summer Research">
+        </div>
+        <header class="project-card__header">
+          <h3 class="project-card__title">
+            Driver Rehabilitation Summer Research
+          </h3>
+        </header>
+        <ul class="project-card__summary">
+          <li>
+            <span class="label">Title & Role:</span>
+            <span class="value">Lead Undergraduate Researcher</span>
+          </li>
+          <li>
+            <span class="label">Problem:</span>
+            <span class="value">
+              Driver rehabilitation simulators often lack motion cues
+            </span>
+          </li>
+          <li>
+            <span class="label">Contribution:</span>
+            <span class="value">
+              Help built the QS-S25 for research on driver rehabilitation & set-up premilinary plan for system integration
+            </span>
+          </li>
+          <li>
+            <span class="label">Result:</span>
+            <span class="value">
+              Research approved and moving forward with system integration in Fall 2025
+            </span>
+          </li>
+        </ul>
+        <footer class="project-card__footer">
+          <button class="btn" onclick="location.href='./research.html'">
+            View Project →
+          </button>
+        </footer>
+      </article>
+
+      <!-- Add more <article class="project-card">…</article> here -->
     </div>
-    <p class="section-text-p1">I'm cooking!</p>
-  </div>
-</section>
+  </section>
+  <footer> 
+   <nav id="navbar">
+        <ul class="navbar">
+            <li>
+                <a class="btn btn-light" onclick="location.href='./#about' ">
+                    <i class="fas fa-user"></i>
+                    About</a>
+            </li>
+            <li>
+                <a class="btn btn-light" onclick="location.href='./#experience'"> 
+                    Skills
+                </a>
+            </li>
+            <li>
+                <a class="btn btn-light" onclick="location.href='./#contactInfo'"> Contact Info</a>
+            </li>
+            <li>
+                <a class="btn btn-light" onclick="location.href='./project.html'"> Projects</a>
+            </li>
+            </ul>
+</nav>
+    <p>Copyright &#169; 2025 Hung Nguyen Reserved.</p>
+</footer>
 </body>
+</html>
