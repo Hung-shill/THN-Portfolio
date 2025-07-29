@@ -26,7 +26,6 @@ body {
   color: var(--color-text);
 }
 
-
 a {
   text-decoration: none;
   text-decoration-color: white;
@@ -162,17 +161,16 @@ section {
 /* ICONS */
 .contact-icons {
   display: flex;
-  justify-content: center;  /* centers the icons horizontally */
-  align-items: center;      /* centers them vertically within the container */
+  justify-content: center; /* centers the icons horizontally */
+  align-items: center; /* centers them vertically within the container */
   gap: 1rem;
   /* if you need spacing above/below: */
   margin: 2rem 0;
 }
 
-
 .contact-icon-link {
   display: block;
-  width: 40px;          /* adjust as needed */
+  width: 40px; /* adjust as needed */
   height: 40px;
 }
 
@@ -243,10 +241,10 @@ section {
 }
 
 .section-text-p3 {
-  font-size: 1.125rem;       /* slightly larger body text */
-  line-height: 1.6;          /* more breathing room */
-  color: #374151;            /* softer dark for easier reading */
-  text-align: justify;       /* clean edges on both sides */
+  font-size: 1.125rem; /* slightly larger body text */
+  line-height: 1.6; /* more breathing room */
+  color: #374151; /* softer dark for easier reading */
+  text-align: justify; /* clean edges on both sides */
   margin-bottom: 1.5rem;
 }
 
@@ -258,9 +256,8 @@ section {
   border-left: 4px solid #3b82f6;
   padding-left: 1rem;
   margin: 1.5rem 0;
-  background: rgba(59,130,246,0.05);
+  background: rgba(59, 130, 246, 0.05);
 }
-
 
 .about-container {
   gap: 2rem;
@@ -307,13 +304,12 @@ section {
   height: 80%;
 }
 
-.profile-pic-container{
+.profile-pic-container {
   height: auto;
   width: 500px;
   margin: auto 0;
   border-radius: 3rem;
 }
-
 
 .section-pic-container {
   height: 400px;
@@ -349,18 +345,17 @@ section {
 
 .skill-category {
   background: #fff;
-  border: 1px solid #e5e7eb;      /* light gray border */
-  border-radius: 1rem;            /* rounded corners */
-  padding: 1.5rem;                /* inner spacing */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.04);  /* subtle lift */
+  border: 1px solid #e5e7eb; /* light gray border */
+  border-radius: 1rem; /* rounded corners */
+  padding: 1.5rem; /* inner spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04); /* subtle lift */
   transition: transform 0.2s ease;
 }
 
 .skill-category:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
-
 
 .skill-category__title {
   font-size: 1.25rem;
@@ -383,7 +378,6 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
-
 
 .skill-item {
   display: flex;
@@ -416,7 +410,6 @@ section {
   }
 }
 
-
 /* PROJECT SECTION */
 .project-card {
   background: var(--color-contrast);
@@ -424,7 +417,7 @@ section {
   overflow: hidden;
   max-width: 600px;
   margin: var(--spacing-lg) auto;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: var(--spacing-md);
@@ -432,7 +425,7 @@ section {
 
 .project-card__image {
   /* choose your desired aspect ratio or fixed height */
-  aspect-ratio: 16/9;   /* keeps all images 16:9 */
+  aspect-ratio: 16/9; /* keeps all images 16:9 */
   width: 100%;
   overflow: hidden;
 }
@@ -440,10 +433,9 @@ section {
 .project-card__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;    /* crop/scale to fill without distortion */
+  object-fit: cover; /* crop/scale to fill without distortion */
   display: block;
 }
-
 
 .project-card__header {
   padding: var(--spacing-md);
@@ -474,7 +466,7 @@ section {
   color: var(--color-primary);
   white-space: nowrap;
 }
-.bold{
+.bold {
   font-weight: 700;
   color: var(--color-primary);
   white-space: nowrap;
@@ -492,11 +484,11 @@ section {
 /* Disable hover effect on the footer’s button */
 .project-card__footer .btn {
   /* Base styles */
-  padding: 0.75rem 1.5rem;       /* comfortable hit‑area */
-  border-radius: 0.75rem;        /* nice rounded corners */
+  padding: 0.75rem 1.5rem; /* comfortable hit‑area */
+  border-radius: 0.75rem; /* nice rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: inline-block;         /* shrink‑wrap to content */
+  display: inline-block; /* shrink‑wrap to content */
   text-align: center;
 }
 
@@ -514,8 +506,8 @@ section {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);  /* 2 columns, equal width */
-  gap: var(--spacing-lg);                  /* space between cards */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns, equal width */
+  gap: var(--spacing-lg); /* space between cards */
 }
 
 /* fallback: on really small screens, go single‑column */
@@ -524,7 +516,6 @@ section {
     grid-template-columns: 1fr;
   }
 }
-
 
 /* Mobile tweak: stack labels & values */
 @media (max-width: 480px) {
@@ -535,9 +526,6 @@ section {
     margin-bottom: var(--spacing-xs);
   }
 }
-
-
-
 
 /* CONTACT SECTION */
 
@@ -667,16 +655,16 @@ footer p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  justify-items: center;   /* center items in their cell */
+  justify-items: center; /* center items in their cell */
 }
 
 .image-grid img {
   width: 100%;
-  height: auto;            /* natural aspect */
+  height: auto; /* natural aspect */
   display: block;
   border-radius: 0.75rem;
   object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -687,9 +675,9 @@ footer p {
 
 /* If there’s only one image, span it across both columns and center it */
 .image-grid img:only-child {
-  grid-column: 1 / -1;     /* span from first to last column */
-  width: 80%;              /* or adjust as you like */
-  justify-self: center;    /* center within that span */
+  grid-column: 1 / -1; /* span from first to last column */
+  width: 80%; /* or adjust as you like */
+  justify-self: center; /* center within that span */
 }
 
 /* Mobile: single column */
@@ -698,8 +686,141 @@ footer p {
     grid-template-columns: 1fr;
   }
   .image-grid img:only-child {
-    width: 100%;           /* full width on mobile */
+    width: 100%; /* full width on mobile */
   }
 }
 
+/* === Layout & Spacing Improvements === */
 
+/* Give each section breathing room */
+section {
+  margin-bottom: var(--spacing-lg, 2rem);
+  padding-bottom: var(--spacing-md, 1rem);
+  /* Remove or adjust height to allow natural content flow */
+  min-height: 40vh;
+  height: auto; /* Remove fixed 96vh, let content decide */
+}
+
+/* Headings spacing */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: var(--spacing-md, 1rem);
+  margin-bottom: var(--spacing-md, 1rem);
+  line-height: 1.2;
+}
+
+/* Paragraphs, lists, add breathing room */
+p,
+ul,
+ol {
+  margin-bottom: var(--spacing-sm, 0.5rem);
+}
+
+/* Cards and content containers */
+.card,
+.project-card,
+.article-container,
+.section,
+.about-container {
+  margin-bottom: var(--spacing-lg, 2rem);
+  padding: var(--spacing-md, 1rem);
+  background: var(--color-bg, #fff);
+  border-radius: var(--radius, 1rem);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Adjust .main-content to prevent horizontal squish */
+.main-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--spacing-lg, 2rem) var(--spacing-md, 1rem);
+}
+
+/* Add gap to flex containers */
+.section-container,
+.about-container,
+.skills-section,
+.skills-grid,
+.projects-container {
+  gap: var(--spacing-lg, 2rem);
+}
+
+/* Project grid spacing */
+.projects-container {
+  margin-top: var(--spacing-lg, 2rem);
+  margin-bottom: var(--spacing-lg, 2rem);
+}
+
+/* Responsive improvements for mobile */
+@media (max-width: 700px) {
+  .main-content {
+    padding: var(--spacing-md, 1rem);
+  }
+  section {
+    margin: 0 0 var(--spacing-md, 1rem) 0;
+    padding-bottom: var(--spacing-sm, 0.5rem);
+    min-height: 20vh;
+  }
+  .card,
+  .project-card,
+  .article-container,
+  .section,
+  .about-container {
+    margin-bottom: var(--spacing-md, 1rem);
+    padding: var(--spacing-sm, 0.5rem);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: var(--spacing-sm, 0.5rem);
+    margin-bottom: var(--spacing-sm, 0.5rem);
+  }
+}
+
+/* BUTTONS: Use your original colors and transitions */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 2rem;
+}
+
+/* Primary dark button (btn-color-1) */
+.btn-color-1 {
+  background: rgb(53, 53, 53);
+  color: white;
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+  color: white;
+  border: rgb(0, 0, 0) 0.1rem solid;
+}
+
+/* Outline/white button (btn-color-2) */
+.btn-color-2 {
+  background: none;
+  color: rgb(53, 53, 53);
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
