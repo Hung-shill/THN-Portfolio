@@ -42,17 +42,37 @@
         align-items: center;
         padding: 12px 16px;
       }
-      nav {
+      nav,
+      .navbar {
         display: flex;
-        gap: 24px;
-        font-size: 14px;
       }
-      nav a {
-        color: #555;
-        text-decoration: none;
+
+      nav {
+        justify-content: space-around;
+        align-items: center;
+        height: 17vh;
       }
-      nav a:hover {
-        color: #000;
+
+      .navbar {
+        gap: 2rem;
+        list-style: none;
+        font: 1.5rem;
+      }
+
+      a:hover {
+        color: grey;
+        text-decoration: underline;
+        text-underline-offset: 1rem;
+        text-decoration-color: rgb(181, 181, 181);
+        cursor: pointer;
+      }
+
+      .logo {
+        font-size: 2rem;
+      }
+
+      .logo:hover {
+        cursor: default;
       }
       .main {
         display: grid;
@@ -163,7 +183,7 @@
   </head>
   <body>
     <header>
-      <div class="container">
+      <nav id="navbar">
         <div style="display: flex; align-items: center; gap: 8px">
           <div
             style="
@@ -182,14 +202,20 @@
           </div>
           <span>Hung's Portfolio</span>
         </div>
-        <nav>
-          <div class="nav-links">
-            <i class="fas fa-user"></i>
-            <a href="./index.html">Main Page</a>
-            <a href="./project.html">Projects</a>
-          </div>
-        </nav>
-      </div>
+        <ul class="navbar">
+          <li>
+            <a class="btn btn-light" onclick="location.href='./#navbar' ">
+              <i class="fas fa-user"></i>
+              Main Page</a
+            >
+          </li>
+          <li>
+            <a class="btn btn-light" onclick="location.href='./project.html'">
+              More Projects</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main class="main">
