@@ -23,10 +23,18 @@
 }
 
 @keyframes dots {
-  0%   { content: ""; }
-  33%  { content: "."; }
-  66%  { content: ".."; }
-  100% { content: "..."; }
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
 }
 * {
   margin: 0;
@@ -423,17 +431,19 @@ section {
   }
 }
 
+. 
 /* PROJECT SECTION */
+
 .project-card {
-  background: var(--color-contrast);
-  border-radius: var(--radius);
-  overflow: hidden;
-  max-width: 600px;
-  margin: var(--spacing-lg) auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: grid; /* use grid instead of flex for consistent rows */
+  grid-template-rows: auto 1fr auto; /* header | content grows | footer fixed */
+  height: 100%; /* allow equal-height stretching in the grid */
+}
+.projects-grid {
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: var(--spacing-md);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  align-items: stretch; /* ensures equal height */
 }
 
 .project-card__image {
@@ -461,23 +471,44 @@ section {
 
 .project-card__summary {
   list-style: none;
-  padding: 0 var(--spacing-md);
-  display: grid;
-  gap: var(--spacing-sm);
+  margin: 1rem 0 0; /* was 1rem 0 auto */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .project-card__summary li {
   display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: var(--spacing-sm);
-  align-items: start;
+  grid-template-columns: 150px 1fr; /* label | value */
+  align-items: center; /* vertically center label */
+  gap: 0.75rem;
+}
+
+.project-card__summary .label {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  white-space: nowrap;
+  text-align: center; /* keep value left-aligned below */
+}
+
+/* Keep values left-aligned and wrapping normally */
+.project-card__summary .value {
+  color: var(--color-text);
+  text-align: left;
 }
 
 .label {
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--color-primary);
-  white-space: nowrap;
+  text-align: center; /* centers label text in its column */
+  color: #111827;
+}
+
+.value {
+  color: #374151;
+  text-align: left;
 }
 .bold {
   font-weight: 700;
@@ -485,13 +516,14 @@ section {
   white-space: nowrap;
 }
 
-.value {
-  color: var(--color-text);
-}
-
 .project-card__footer {
+  align-self: end; /* pin to the bottom grid row */
+  justify-self: center; /* center the footer horizontally within card */
   padding: var(--spacing-md);
-  text-align: right;
+  display: flex; /* button row */
+  justify-content: center; /* center buttons */
+  gap: 0.75rem;
+  width: 100%; /* optional: full width footer for consistent look */
 }
 
 /* Disable hover effect on the footer’s button */
@@ -503,6 +535,11 @@ section {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: inline-block; /* shrink‑wrap to content */
   text-align: center;
+  background: var(--color-primary);
+  color: #fff;
+  border: 1px solid var(--color-primary);
+  margin-bottom: 2px;
+  margin-top: 2px;
 }
 
 .project-card__footer .btn:hover {
@@ -595,12 +632,10 @@ section {
 /* FOOTER */
 
 footer {
-  height: 5;
-  margin: 0 2rem;
-}
-
-footer p {
   text-align: center;
+  padding: 32px 16px;
+  color: #777;
+  font-size: 12px;
 }
 
 /* 1st proto PARKINGPAL PROBLEM SECTION  */

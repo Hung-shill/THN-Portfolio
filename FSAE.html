@@ -1,116 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <META  charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Hung Nguyen Portfolio</title>
-    </head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="" type="./image/x-icon">
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hung Nguyen Portfolio</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="shortcut icon" href="" type="./image/x-icon" />
+  <body>
     <nav id="navbar">
-        <ul class="navbar">
-            <li>
-                <a class="btn btn-light" onclick="location.href='./#navbar' ">
-                    <i class="fas fa-user"></i>
-                    Main Page</a>
-            </li>
-            <li>
-                <a class="btn btn-light" onclick="location.href='./FSAE.html#fsae_problem'"> 
-                    Problem
-                </a>
-            </li>
-            <li>
-                <a class="btn btn-light" onclick="location.href='./FSAE.html#fsae_contribution'">Contribution</a>
-            </li>
-            <li>
-                <a class="btn btn-light" onclick="location.href='./FSAE.html#fsae_result'">Result</a>
-            </li>
-            <li>
-                <a class="btn btn-light" onclick="location.href='./project.html'">More Projects</a>
-            </li>
-            </ul>
-        
+      <div style="display: flex; align-items: center; gap: 8px">
+        <div
+          style="
+            background: #111;
+            color: #fff;
+            font-weight: bold;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+          "
+        >
+          H
+        </div>
+        <span>Hung's Portfolio</span>
+      </div>
+      <ul class="navbar">
+        <li>
+          <a class="btn btn-light" onclick="location.href='./#navbar' ">
+            <i class="fas fa-user"></i>
+            Main Page</a
+          >
+        </li>
+        <li>
+          <a
+            class="btn btn-light"
+            onclick="location.href='./FSAE.html#fsae_problem'"
+          >
+            Problem
+          </a>
+        </li>
+        <li>
+          <a
+            class="btn btn-light"
+            onclick="location.href='./FSAE.html#fsae_contribution'"
+            >Contribution</a
+          >
+        </li>
+        <li>
+          <a
+            class="btn btn-light"
+            onclick="location.href='./FSAE.html#fsae_result'"
+            >Result</a
+          >
+        </li>
+        <li>
+          <a class="btn btn-light" onclick="location.href='./project.html'"
+            >More Projects</a
+          >
+        </li>
+      </ul>
     </nav>
-<!-- problem section -->
-<section id="fsae_problem">
-    <div class="section-text">
-        <h1 class="title"> The Problem</h1>
-        <p class="section-text-p1">Responsible for ensuring a strong, reliable connection between the chassis and suspension system on LMU's first FSAE car. The main challenge was achieving structural integrity and precise alignment under dynamic loads while coordinating with other sub-teams to meet performance and safety standards.</p>
-    </div>
-    <article class="article-container">
-    <div class="image-grid">
-      <img src="./images/fsaeProblem.png" alt="FEA stress result" class="section-pic-container">
-      <!-- <img src="./images/fsaeContribution1.png" alt="Bracket simulation" class="section-pic-container">
+    <!-- problem section -->
+    <section id="fsae_problem">
+      <div class="section-text">
+        <h1 class="title">The Problem</h1>
+        <p class="section-text-p1">
+          Responsible for ensuring a strong, reliable connection between the
+          chassis and suspension system on LMU's first FSAE car. The main
+          challenge was achieving structural integrity and precise alignment
+          under dynamic loads while coordinating with other sub-teams to meet
+          performance and safety standards.
+        </p>
+      </div>
+      <article class="article-container">
+        <div class="image-grid">
+          <img
+            src="./images/fsaeProblem.png"
+            alt="FEA stress result"
+            class="section-pic-container"
+          />
+          <!-- <img src="./images/fsaeContribution1.png" alt="Bracket simulation" class="section-pic-container">
       <img src="./images/fsaeContribution2.png" alt="Optimized geometry" class="section-pic-container">
       <img src="./images/brakeRotorv1.png" alt="Brake rotor CAD" class="section-pic-container"> -->
-    </div>
-  </article>
-</section>
-<!-- contribution section -->
-<section id="fsae_contribution">
-  <div class="section-text">
-    <h1 class="title">Contribution</h1>
-    <p class="section-text-p1">
-      Designed multiple parts in SolidWorks and validated load responses up to 616 lbs (FSAE regulations allow cars up to 300 kg).
-    </p>
-  </div>
+        </div>
+      </article>
+    </section>
+    <!-- contribution section -->
+    <section id="fsae_contribution">
+      <div class="section-text">
+        <h1 class="title">Contribution</h1>
+        <p class="section-text-p1">
+          Designed multiple parts in SolidWorks and validated load responses up
+          to 616 lbs (FSAE regulations allow cars up to 300 kg).
+        </p>
+      </div>
 
-  <article class="article-container">
-    <div class="image-grid">
-      <img src="./images/fsaeContribution.png" alt="FEA stress result" class="section-pic-container">
-      <img src="./images/fsaeContribution1.png" alt="Bracket simulation" class="section-pic-container">
-      <img src="./images/fsaeContribution2.png" alt="Optimized geometry" class="section-pic-container">
-      <img src="./images/brakeRotorv1.png" alt="Brake rotor CAD" class="section-pic-container">
-    </div>
-  </article>
-</section>
+      <article class="article-container">
+        <div class="image-grid">
+          <img
+            src="./images/fsaeContribution.png"
+            alt="FEA stress result"
+            class="section-pic-container"
+          />
+          <img
+            src="./images/fsaeContribution1.png"
+            alt="Bracket simulation"
+            class="section-pic-container"
+          />
+          <img
+            src="./images/fsaeContribution2.png"
+            alt="Optimized geometry"
+            class="section-pic-container"
+          />
+          <img
+            src="./images/brakeRotorv1.png"
+            alt="Brake rotor CAD"
+            class="section-pic-container"
+          />
+        </div>
+      </article>
+    </section>
 
-
-<!-- Result section -->
-<section id="fsae_result">
-    <div class="section-text">
-                <h1 class="title">The Result</h1>
-                <p class="section-text-p1 loading">Currently manifesting a car </p>
-            </div>
-    <div class="article-container">
+    <!-- Result section -->
+    <section id="fsae_result">
+      <div class="section-text">
+        <h1 class="title">The Result</h1>
+        <p class="section-text-p1 loading">Currently manifesting a car</p>
+      </div>
+      <div class="article-container">
         <!-- <img src="./images/.jpg" alt="result picture" class="section-pic-container"> -->
-</div>
-<!-- Footer -->
-
-</section>
-<footer> 
-   <nav id="navbar">
+      </div>
+      <!-- Footer -->
+    </section>
+    <footer>
+      <nav id="navbar">
         <ul class="navbar">
-           <li>
-                <a class="btn btn-light" onclick="location.href='./#navbar' ">
-                    <i class="fas fa-user"></i>
-                    Front Page</a>
-            </li>
-            <li>
-                <a class="btn btn-light" onclick="location.href='./parkingpal.html#pp_problem'"> 
-                    Problem
-                </a>
-            </li>
-            <li>
-                <a class="btn btn-light" onclick="location.href='./parkingpal.html#pp_contribution'">Contribution</a>
-            </li>
-            <li>
-                <a class="btn btn-light" onclick="location.href='./parkingpal.html#pp_result'"> Result</a>
-            </li>
-            <li>
-                <a class="btn btn-light" onclick="location.href='./project.html'">More Projects</a>
-            </li>
-            </ul>
-        
-</nav>
-    <p>Copyright &#169; 2025 Hung Nguyen Reserved.</p>
-</footer>
-
-
-</body>
+          <li>
+            <a class="btn btn-light" onclick="location.href='./#navbar' ">
+              <i class="fas fa-user"></i>
+              Front Page</a
+            >
+          </li>
+          <li>
+            <a
+              class="btn btn-light"
+              onclick="location.href='./parkingpal.html#pp_problem'"
+            >
+              Problem
+            </a>
+          </li>
+          <li>
+            <a
+              class="btn btn-light"
+              onclick="location.href='./parkingpal.html#pp_contribution'"
+              >Contribution</a
+            >
+          </li>
+          <li>
+            <a
+              class="btn btn-light"
+              onclick="location.href='./parkingpal.html#pp_result'"
+            >
+              Result</a
+            >
+          </li>
+          <li>
+            <a class="btn btn-light" onclick="location.href='./project.html'"
+              >More Projects</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <p>Copyright &#169; 2025 Hung Nguyen Reserved.</p>
+    </footer>
+  </body>
+</html>
