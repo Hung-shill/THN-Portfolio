@@ -2,19 +2,27 @@
 <html lang="en">
 
 <head>
-  <META charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hung Nguyen Portfolio</title>
-</head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-  rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="css/style.css">
-<link rel="shortcut icon" href="" type="image/x-icon">
+  <meta name="description" content="Hung Nguyen - Mechanical Engineering student at LMU specializing in autonomous systems, CAD design, and IoT development. Portfolio showcasing FSAE, parking sensor prototypes, and driver rehabilitation research.">
+  <meta name="keywords" content="mechanical engineering, autonomous vehicles, CAD, SolidWorks, Arduino, IoT, FSAE, LMU">
+  <title>Hung Nguyen - Mechanical Engineering Portfolio | LMU Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="preload" as="image" href="./images/profile.jpg" fetchpriority="high"> -->
+  <!-- <link rel="icon" type="image/jpeg" href="./images/profile.jpg"> -->
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6CR9BS9JC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E6CR9BS9JC');
+  </script>
 </head>
 
 <body>
@@ -37,20 +45,15 @@
     </div>
     <ul class="navbar">
       <li>
-        <a class="btn btn-light" onclick="location.href='./#about' ">
+        <a class="btn btn-light" href="#about">
           <i class="fas fa-user"></i>
           About</a>
       </li>
       <li>
-        <a class="btn btn-light" onclick="location.href='./#experiences'">
-          Skills
-        </a>
+        <a class="btn btn-light" href="#experiences">Skills</a>
       </li>
       <li>
-        <a class="btn btn-light" onclick="location.href='./#contactInfo'"> Contact Info</a>
-      </li>
-      <li>
-        <a class="btn btn-light" onclick="location.href='./project.html'"> Projects</a>
+        <a class="btn btn-light" href="./project.html">Projects</a>
       </li>
     </ul>
 
@@ -59,7 +62,7 @@
   <!-- profile start here -->
   <section id="profile">
     <div class="profile-pic-container">
-      <img src="./images/profile.jpg" alt="Hung Nguyen profile picture" class="profile-pic-container">
+      <img src="./images/profile.jpg" alt="Hung Nguyen profile picture" class="profile-pic-container" loading="eager" decoding="async">
     </div>
     <div class="section-text">
       <p class="section-text-p1"> Hi, My name is</p>
@@ -67,9 +70,9 @@
       <p class="section-text-p2"> A Mechanical Engineering Student at Loyola Marymount University </p>
       <div class="btn-container">
 
-        <button class="btn btn-color-2" onclick="location.href='./project.html'">Projects</button>
+        <a href="./project.html" class="btn btn-color-2">Projects</a>
 
-        <button class="btn btn-color-1" onclick="location.href='./#contactInfo'">Contact Info</button>
+        <a href="#contactInfo" class="btn btn-color-1">Contact Info</a>
       </div>
       <!-- HTML -->
       <div class="contact-icons">
@@ -82,8 +85,10 @@
         </a>
         <!-- add more icons here -->
       </div>
-      The whole portfolio is designed and coded by me!
-      <div> So please take a look :)</div>
+      <div class="scroll-indicator">
+        <p>Learn more about my work</p>
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </div>
 
   </section>
@@ -98,7 +103,7 @@
         <div class="about-container">
           <!-- insert experience icon  -->
           <div class="detail-container">
-            <img src="./images/experiences.png" alt="experience icon" class="icon">
+            <img src="./images/experiences.png" alt="experience icon" class="icon" loading="lazy" decoding="async">
             <h3>Professional/Relevant Experiences:</h3>
             <p> Software Engineer Intern @ FPT Corporation</p>
             <p> Automotive Mechanic Intern @ TU Automotive</p>
@@ -111,7 +116,7 @@
         <div class="section-container">
           <div class="detail-container">
             <!-- insert education icon -->
-            <img src="./images/qualification.png" alt="qualification icon" class="icon">
+            <img src="./images/qualification.png" alt="qualification icon" class="icon" loading="lazy" decoding="async">
             <h3>Education:</h3>
             <p>B.S Bachelor of Mechanical Engineer (Expected May 2027)</p>
             <h3>Relevant Courses:</h3>
@@ -124,19 +129,18 @@
       </div>
       <div class="text-container">
         <p class="section-text-p3">
-          I’m a Junior majoring in Mechanical Engineering at Loyola Marymount University.
+          I'm a Junior majoring in Mechanical Engineering at Loyola Marymount University.
           I have a strong attachment to tinkering and bringing ideas to life.
         </p>
 
         <blockquote class="text-pull-quote">
-          "Waymo is quiet literally the coolest thing yet!"
+          "Waymo is quite literally the coolest thing yet!"
         </blockquote>
 
         <p class="section-text-p3">
           From a young age, I’ve asked: “What if my ideas could really come to life?”
           That question drives my passion for converting concepts into tangible solutions whether through product
-          designs,
-          mechanical systems, or cool prototypes.
+          designs, mechanical systems, or cool prototypes.
         </p>
 
         <p class="section-text-p3">
@@ -145,7 +149,7 @@
         </p>
 
         <p class="section-text-p3">
-          I’m always on the lookout for hands‑on challenges
+          I'm always on the lookout for hands‑on challenges
           that push my skills, broaden my perspective, and let me create cool stuff.
         </p>
       </div>
@@ -163,12 +167,12 @@
         <h4 class="skill-category__title">CAD & Drafting</h4>
         <ul class="skill-list">
           <li class="skill-item">
-            <img src="images/Solid-icon.png" alt="SolidWorks">
+            <img src="images/Solid-icon.png" alt="SolidWorks CAD software logo" loading="lazy" decoding="async">
             <span>SolidWorks</span>
             <small> Novice</small>
           </li>
           <li class="skill-item">
-            <img src="images/GD&T.png" alt="GD&amp;T">
+            <img src="images/GD&T.png" alt="Geometric Dimensioning and Tolerancing symbol" loading="lazy" decoding="async">
             <span>GD&amp;T</span>
             <small> Novice</small>
           </li>
@@ -180,27 +184,27 @@
         <h4 class="skill-category__title">Programming & Simulation</h4>
         <ul class="skill-list">
           <li class="skill-item">
-            <img src="images/matlab-icon.png" alt="MATLAB">
+            <img src="images/matlab-icon.png" alt="MATLAB programming environment logo" loading="lazy" decoding="async">
             <span>MATLAB</span>
             <small> Novice</small>
           </li>
           <li class="skill-item">
-            <img src="images/c++.png" alt="C/C++">
+            <img src="images/c++.png" alt="C++ programming language logo" loading="lazy" decoding="async">
             <span>C++</span>
             <small>Novice</small>
           </li>
           <li class="skill-item">
-            <img src="images/python.png" alt="Python">
+            <img src="images/python.png" alt="Python programming language logo" loading="lazy" decoding="async">
             <span>Python</span>
             <small> Novice</small>
           </li>
           <li class="skill-item">
-            <img src="images/js.png" alt="JavaScript">
+            <img src="images/js.png" alt="JavaScript programming language logo" loading="lazy" decoding="async">
             <span>JavaScript</span>
             <small>Apprentice</small>
           </li>
           <li class="skill-item">
-            <img src="images/Java.png" alt="Java">
+            <img src="images/Java.png" alt="Java programming language logo" loading="lazy" decoding="async">
             <span>Java</span>
             <small> Novice</small>
           </li>
@@ -212,21 +216,31 @@
         <h4 class="skill-category__title">Embedded & Data Tools</h4>
         <ul class="skill-list">
           <li class="skill-item">
-            <img src="images/arduinoLogo.png" alt="Arduino">
+            <img src="images/arduinoLogo.png" alt="Arduino microcontroller platform logo" loading="lazy" decoding="async">
             <span>Arduino IDE</span>
             <small> Novice</small>
           </li>
           <li class="skill-item">
-            <img src="images/KiCadLogo.png" alt="KiCad">
+            <img src="images/KiCadLogo.png" alt="KiCad PCB design software logo" loading="lazy" decoding="async">
             <span>KiCad</span>
             <small> Novice</small>
           </li>
           <li class="skill-item">
-            <img src="images/excel.png" alt="Microsoft Excel">
+            <img src="images/excel.png" alt="Microsoft Excel spreadsheet software logo" loading="lazy" decoding="async">
             <span>Excel</span>
             <small>Wizard</small>
           </li>
         </ul>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta-section">
+      <h2>Ready to Build Something Amazing Together?</h2>
+      <p class="section-text-p4">I'm actively seeking internship opportunities and collaborative projects in mechanical engineering, robotics, autonomous vehicle system and mechatronics.</p>
+      <div class="cta-buttons">
+        <a href="#contactInfo" class="btn btn-cta-primary">Get In Touch</a>
+        <a href="./project.html" class="btn btn-cta-secondary">View My Work</a>
       </div>
     </div>
   </section>
@@ -257,20 +271,15 @@
       <div class="navbar-container">
         <ul class="navbar">
           <li>
-            <a class="btn btn-light" onclick="location.href='./#about'">
+            <a class="btn btn-light" href="#about">
               <i class="fas fa-user"></i>
               About</a>
           </li>
           <li>
-            <a class="btn btn-light" onclick="location.href='./#experiences'">
-              Skills
-            </a>
+            <a class="btn btn-light" href="#experiences">Skills</a>
           </li>
           <li>
-            <a class="btn btn-light" onclick="location.href='./#contactInfo'"> Contact Info</a>
-          </li>
-          <li>
-            <a class="btn btn-light" onclick="location.href='./project.html'">
+            <a class="btn btn-light" href="./project.html">
               Projects</a>
           </li>
         </ul>
@@ -279,6 +288,80 @@
     <footer>
       <p>© 2025 Hung Nguyen Reserved</p>
     </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" title="Go to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Analytics event tracking function
+    function trackEvent(eventName, category = 'engagement', label = '') {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', eventName, {
+          event_category: category,
+          event_label: label
+        });
+      }
+    }
+
+    // Back to top functionality
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      trackEvent('back_to_top_click', 'navigation');
+    });
+
+    // Track CTA button clicks
+    document.addEventListener('DOMContentLoaded', () => {
+      // Track contact button clicks
+      const contactButtons = document.querySelectorAll('a[href="#contactInfo"], a[href="mailto:hnguyen5478069@gmail.com"]');
+      contactButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          trackEvent('contact_click', 'conversion', btn.textContent);
+        });
+      });
+
+      // Track project page visits
+      const projectButtons = document.querySelectorAll('a[href="./project.html"]');
+      projectButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          trackEvent('projects_view', 'content', 'main_projects_page');
+        });
+      });
+
+      // Track external links (LinkedIn, email)
+      const externalLinks = document.querySelectorAll('a[href^="https://www.linkedin.com"], a[href^="mailto:"]');
+      externalLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          const platform = link.href.includes('linkedin') ? 'linkedin' : 'email';
+          trackEvent('external_link_click', 'social', platform);
+        });
+      });
+
+      // Track scroll depth
+      let scrollDepth = 0;
+      window.addEventListener('scroll', () => {
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        if (scrollPercent > scrollDepth && scrollPercent % 25 === 0) {
+          scrollDepth = scrollPercent;
+          trackEvent('scroll_depth', 'engagement', `${scrollPercent}%`);
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
