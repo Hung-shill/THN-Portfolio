@@ -12,34 +12,29 @@
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" as="image" href="./images/FSAEproject-pic.jpg" fetchpriority="high">
+
+    <!-- Critical CSS -->
+    <style>
+      :root{--spacing-xs:.5rem;--spacing-sm:1rem;--spacing-md:2rem;--spacing-lg:3rem;--spacing-xl:4rem;--radius:1rem;--color-bg:#fff;--color-contrast:#f7f8fa;--color-primary:#000;--color-accent:#e01948;--color-text:#000;--font-base:1rem;--font-lg:1.25rem;--font-xl:1.5rem}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:system-ui,sans-serif;line-height:1.5;color:var(--color-text)}nav,nav .navbar{display:flex}nav{justify-content:space-around;align-items:center;height:17vh}.navbar{gap:2rem;list-style:none;font-size:1.5rem}.title{font-size:3rem;text-align:center;margin-bottom:var(--spacing-md)}.projects-container{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--spacing-lg)}.btn{font-weight:600;transition:all .3s ease;padding:1rem;width:10rem;border-radius:2rem;text-decoration:none!important;display:inline-block;text-align:center;cursor:pointer}
+    </style>
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
 
     <!-- Your Styles -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/jpeg" href="./images/profile.jpg" />
 
     <!-- Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6CR9BS9JC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "GA_MEASUREMENT_ID");
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E6CR9BS9JC');
     </script>
   </head>
   <body>
@@ -67,7 +62,7 @@
         <li>
           <a class="btn btn-light" href="./#about">
             <i class="fas fa-user"></i>
-            About</a
+            Main</a
           >
         </li>
         <li>
@@ -362,6 +357,53 @@
             // Only track if spent more than 10 seconds
             trackEvent("time_on_page", "engagement", `${timeSpent}_seconds`);
           }
+        });
+      });
+
+      // Image loading management
+      document.addEventListener('DOMContentLoaded', () => {
+        // Add loading class to all images
+        document.querySelectorAll('img').forEach(img => {
+          if (!img.complete) {
+            img.classList.add('loading');
+            img.addEventListener('load', () => {
+              img.classList.remove('loading');
+              img.classList.add('loaded');
+            });
+          } else {
+            img.classList.add('loaded');
+          }
+        });
+      });
+
+      // Smooth scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Add animation classes and observe elements
+      document.addEventListener('DOMContentLoaded', () => {
+        // Animate sections
+        document.querySelectorAll('section').forEach((section, index) => {
+          section.classList.add('fade-in');
+          observer.observe(section);
+        });
+
+        // Animate project cards
+        document.querySelectorAll('.project-card').forEach((card, index) => {
+          card.classList.add('slide-in-right');
+          card.style.transitionDelay = `${index * 0.2}s`;
+          observer.observe(card);
         });
       });
     </script>

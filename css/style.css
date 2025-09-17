@@ -17,35 +17,16 @@
 }
 
 /* GLOBAL STYLES */
-
-html {
-  scroll-behavior: smooth;
-}
-
-.loading::after {
-  content: "";
-  animation: dots 1.75s steps(3, end) infinite;
-}
-
-@keyframes dots {
-  0% {
-    content: "";
-  }
-  33% {
-    content: ".";
-  }
-  66% {
-    content: "..";
-  }
-  100% {
-    content: "...";
-  }
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: system-ui, sans-serif;
   line-height: 1.5;
@@ -58,6 +39,14 @@ a {
   color: #333;
 }
 
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+  cursor: pointer;
+}
+
 ul {
   list-style: none;
 }
@@ -66,18 +55,24 @@ p {
   color: rgb(85, 85, 85);
 }
 
-image {
+img {
   max-width: 100%;
 }
 
-/* transition classes */
+/* LOADING ANIMATION */
+.loading::after {
+  content: "";
+  animation: dots 1.75s steps(3, end) infinite;
+}
 
-.btn {
-  transition: all 300ms ease;
+@keyframes dots {
+  0% { content: ""; }
+  33% { content: "."; }
+  66% { content: ".."; }
+  100% { content: "..."; }
 }
 
 /* DESKTOP NAVIGATION */
-
 nav,
 .navbar {
   display: flex;
@@ -92,15 +87,7 @@ nav {
 .navbar {
   gap: 2rem;
   list-style: none;
-  font: 1.5rem;
-}
-
-a:hover {
-  color: grey;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
-  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 .logo {
@@ -109,11 +96,6 @@ a:hover {
 
 .logo:hover {
   cursor: default;
-}
-/* ULTILITY CLASSES */
-
-html {
-  scroll-behavior: smooth;
 }
 
 /* PROFILE SECTION */
@@ -209,50 +191,56 @@ section {
   height: 3rem;
 }
 
-/* BUTTON */
+/* CONSOLIDATED BUTTON STYLES */
 .btn-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
+
 .btn {
   font-weight: 600;
-  transition: all 300ms ease;
+  transition: all 0.3s ease;
   padding: 1rem;
   width: 10rem;
   border-radius: 2rem;
-}
-
-.btn-color-1,
-.btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
-}
-
-.btn-color-1:hover,
-.btn-color-2:hover {
+  text-decoration: none !important;
+  display: inline-block;
+  text-align: center;
   cursor: pointer;
 }
 
-.btn-color-1,
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-decoration: none !important;
+}
+
+/* Primary dark button */
+.btn-color-1 {
+  background: rgb(53, 53, 53);
+  color: white;
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+  border: rgb(0, 0, 0) 0.1rem solid;
+}
+
+/* Outline button */
+.btn-color-2 {
+  background: none;
+  color: rgb(53, 53, 53);
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
 .btn-color-2:hover {
   background: rgb(53, 53, 53);
   color: white;
-}
-.btn-color-1:hover {
-  background: rgb(0, 0, 0);
-}
-
-.btn-color-2 {
-  background: none;
-}
-
-.btn-color-2:hover {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
-  gap: 1rem;
-}
 
 /* ABOUT SECTION */
 
@@ -836,46 +824,7 @@ ol {
   }
 }
 
-/* BUTTONS: Use your original colors and transitions */
-.btn-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.btn {
-  font-weight: 600;
-  transition: all 300ms ease;
-  padding: 1rem;
-  width: 10rem;
-  border-radius: 2rem;
-}
-
-/* Primary dark button (btn-color-1) */
-.btn-color-1 {
-  background: rgb(53, 53, 53);
-  color: white;
-  border: rgb(53, 53, 53) 0.1rem solid;
-}
-
-.btn-color-1:hover {
-  background: rgb(0, 0, 0);
-  color: white;
-  border: rgb(0, 0, 0) 0.1rem solid;
-}
-
-/* Outline/white button (btn-color-2) */
-.btn-color-2 {
-  background: none;
-  color: rgb(53, 53, 53);
-  border: rgb(53, 53, 53) 0.1rem solid;
-}
-
-.btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
-  border: rgb(255, 255, 255) 0.1rem solid;
-}
+/* CONSOLIDATED BUTTON STYLES */
 
 /* SCROLL INDICATOR */
 .scroll-indicator {
@@ -1051,19 +1000,151 @@ ol {
   transform: translateY(-2px);
 }
 
-/* BUTTON HOVER IMPROVEMENTS */
-.btn {
-  transition: all 0.3s ease;
-  text-decoration: none !important;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  text-decoration: none !important;
-}
 
 /* NAVIGATION IMPROVEMENTS */
 .navbar a:hover {
   transform: translateY(-1px);
+}
+
+/* SMOOTH SCROLL ANIMATIONS & PERFORMANCE */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* PERFORMANCE OPTIMIZATIONS */
+.skill-item img,
+.contact-icon,
+.project-card__image img {
+  will-change: transform;
+}
+
+.btn {
+  will-change: transform, box-shadow;
+}
+
+/* LOADING SKELETON ANIMATIONS */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-text {
+  height: 1rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-text.title {
+  height: 2rem;
+  width: 60%;
+  margin: 0 auto 1rem;
+}
+
+.skeleton-text.line {
+  width: 100%;
+}
+
+.skeleton-text.line:nth-child(even) {
+  width: 85%;
+}
+
+.skeleton-text.short {
+  width: 70%;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius);
+}
+
+/* Image loading states */
+img.loading {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+/* TOUCH IMPROVEMENTS */
+@media (hover: none) and (pointer: coarse) {
+  .btn:hover,
+  .skill-item:hover,
+  .project-card:hover {
+    transform: none;
+  }
+
+  .btn:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+
+  /* Larger touch targets on mobile */
+  .btn {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  .contact-icon {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  .navbar a {
+    padding: 12px 16px;
+  }
 }

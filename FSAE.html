@@ -3,23 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hung Nguyen Portfolio</title>
+    <title>FSAE Suspension Project - Hung Nguyen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" as="image" href="./images/fsaeProblem.png" fetchpriority="high">
+
+    <!-- Critical CSS -->
+    <style>
+      :root{--spacing-xs:.5rem;--spacing-sm:1rem;--spacing-md:2rem;--spacing-lg:3rem;--spacing-xl:4rem;--radius:1rem;--color-bg:#fff;--color-contrast:#f7f8fa;--color-primary:#000;--color-accent:#e01948;--color-text:#000;--font-base:1rem;--font-lg:1.25rem;--font-xl:1.5rem}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:system-ui,sans-serif;line-height:1.5;color:var(--color-text)}nav,nav .navbar{display:flex}nav{justify-content:space-around;align-items:center;height:17vh}.navbar{gap:2rem;list-style:none;font-size:1.5rem}.title{font-size:3rem;text-align:center;margin-bottom:var(--spacing-md)}.btn{font-weight:600;transition:all .3s ease;padding:1rem;width:10rem;border-radius:2rem;text-decoration:none!important;display:inline-block;text-align:center;cursor:pointer}
+    </style>
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/jpeg" href="./images/profile.jpg" />
   </head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="shortcut icon" href="" type="./image/x-icon" />
   <body>
     <nav id="navbar">
       <div style="display: flex; align-items: center; gap: 8px">
@@ -42,37 +44,26 @@
       </div>
       <ul class="navbar">
         <li>
-          <a class="btn btn-light" onclick="location.href='./#navbar' ">
+          <a class="btn btn-light" href="./#navbar">
             <i class="fas fa-user"></i>
-            Main Page</a
-          >
+            Main</a>
         </li>
         <li>
-          <a
-            class="btn btn-light"
-            onclick="location.href='./FSAE.html#fsae_problem'"
-          >
+          <a class="btn btn-light" href="./FSAE.html#fsae_problem">
             Problem
           </a>
         </li>
         <li>
-          <a
-            class="btn btn-light"
-            onclick="location.href='./FSAE.html#fsae_contribution'"
-            >Contribution</a
-          >
+          <a class="btn btn-light" href="./FSAE.html#fsae_contribution">
+            Contribution</a>
         </li>
         <li>
-          <a
-            class="btn btn-light"
-            onclick="location.href='./FSAE.html#fsae_result'"
-            >Result</a
-          >
+          <a class="btn btn-light" href="./FSAE.html#fsae_result">
+            Result</a>
         </li>
         <li>
-          <a class="btn btn-light" onclick="location.href='./project.html'"
-            >More Projects</a
-          >
+          <a class="btn btn-light" href="./project.html">
+            Projects</a>
         </li>
       </ul>
     </nav>
@@ -155,7 +146,7 @@
           <li>
             <a class="btn btn-light" onclick="location.href='./#navbar' ">
               <i class="fas fa-user"></i>
-              Front Page</a
+              Main</a
             >
           </li>
           <li>
@@ -183,12 +174,50 @@
           </li>
           <li>
             <a class="btn btn-light" onclick="location.href='./project.html'"
-              >More Projects</a
+              > Projects</a
             >
           </li>
         </ul>
       </nav>
       <p>Copyright &#169; 2025 Hung Nguyen Reserved.</p>
     </footer>
+    <script>
+      // Image loading management
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('img').forEach(img => {
+          if (!img.complete) {
+            img.classList.add('loading');
+            img.addEventListener('load', () => {
+              img.classList.remove('loading');
+              img.classList.add('loaded');
+            });
+          } else {
+            img.classList.add('loaded');
+          }
+        });
+      });
+
+      // Smooth scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('section').forEach((section, index) => {
+          section.classList.add('fade-in');
+          observer.observe(section);
+        });
+      });
+    </script>
   </body>
 </html>
