@@ -1,2 +1,2 @@
 Link to website:
-   https://hung-shill.github.io/THN-Portfolio/
+   http://hung-shill.github.io/thn-portfolio/
